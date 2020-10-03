@@ -71,10 +71,10 @@ exports.onCreateWebpackConfig = ({ actions }) => {
         scss: path.resolve(__dirname, 'src/scss'),
       },
     },
-	  devServer: {
-            watchOptions: {
-                ignored: /\.#|node_modules|~$/,
-            },
-        }
+    devServer: {
+      watchOptions: {
+        ignored: /\.#|node_modules|~$/,
+      },
+    },
   })
 }

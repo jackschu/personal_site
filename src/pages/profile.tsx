@@ -23,7 +23,9 @@ const Profile: React.FC<Props> = ({ location, data }: Props) => {
           <div className="container">
             <Img fixed={profile as FixedObject} className="rounded-circle" />
             <h1>Jack Schumann</h1>
-            <p className="lead text-muted">Full-stack engineer at Facebook DC</p>
+            <p className="lead text-muted">
+              Full-stack engineer at Facebook DC
+            </p>
           </div>
         </section>
       </div>
@@ -37,7 +39,7 @@ export const query = graphql`
   query ProfilePageQuery {
     profile: file(name: { eq: "jackpride" }) {
       childImageSharp {
-          fixed(width: 120, height: 120, quality: 100) {
+        fixed(width: 120, height: 120, quality: 100) {
           ...GatsbyImageSharpFixed_withWebp
         }
       }

@@ -13,21 +13,21 @@ interface Props {
 
 const Blog: React.FC<Props> = ({ data, location }: Props) => {
   const posts = data.remark.posts
-	return (
-		    <Layout location={location}>
+  return (
+    <Layout location={location}>
       <Meta site={siteMetadata} title="Profile" />
-	  <div>
-      {posts.map((post, i) => (
-        <Post
-          data={post as PostByPathQuery}
-          options={{
-            isIndex: true,
-          }}
-          key={i}
-        />
-      ))}
-	  </div>
-		</Layout>
+      <div>
+        {posts.map((post, i) => (
+          <Post
+            data={post as PostByPathQuery}
+            options={{
+              isIndex: true,
+            }}
+            key={i}
+          />
+        ))}
+      </div>
+    </Layout>
   )
 }
 
@@ -42,7 +42,7 @@ export const query = graphql`
         post: node {
           html
           frontmatter {
-		  hidden	  
+            hidden
             layout
             title
             path

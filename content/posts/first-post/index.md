@@ -11,10 +11,9 @@ tags:
   - Emoji
 ---
 
-If I had thoughts I'd blog about them like *this* 😄
+If I had thoughts I'd blog about them like _this_ 😄
 
 ```js
 // javascript
 console.log('Hello World!!')
-
 ```
