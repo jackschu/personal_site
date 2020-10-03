@@ -101,5 +101,6 @@ module.exports = {
     'gatsby-plugin-twitter',
     'gatsby-plugin-typescript',
     'gatsby-transformer-sharp',
+    'gatsby-plugin-netlify',
   ],
 }
