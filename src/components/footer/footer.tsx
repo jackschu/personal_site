@@ -15,7 +15,7 @@ const Footer: React.FC<Props> = ({ author, title }: Props) => (
         {title}
         <Link to="/profile/">
           <br />
-          <strong>{author}</strong> on Profile
+          Built by <strong>{author}</strong> with React and Gatsby.js
         </Link>
       </p>
     </div>

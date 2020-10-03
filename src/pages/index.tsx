@@ -51,6 +51,7 @@ export const pageQuery = graphql`
         post: node {
           html
           frontmatter {
+		  hidden	  
             layout
             title
             path
