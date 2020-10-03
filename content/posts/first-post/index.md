@@ -6,6 +6,7 @@ path: '/hello/'
 hidden: false
 category: Test Post
 tags:
+  - First Post
   - Markdown
   - Emoji
 ---
@@ -15,4 +16,5 @@ If I had thoughts I'd blog about them like *this* 😄
 ```js
 // javascript
 console.log('Hello World!!')
+
 ```

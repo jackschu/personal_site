@@ -1,9 +1,9 @@
 /* eslint-disable @typescript-eslint/camelcase */
 module.exports = {
   siteMetadata: {
-    title: 'My corner of the internet',
+    title: 'My Corner of the Internet',
     description: 'A personal site for me',
-    siteUrl: 'https://gatstrap.netlify.com',
+    siteUrl: 'localhost:8000',
     author: 'Jack Schumann',
     adsense: '',
   },
