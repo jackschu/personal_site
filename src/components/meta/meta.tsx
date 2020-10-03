@@ -7,7 +7,7 @@ interface Props {
   site:
     | Pick<
         SiteSiteMetadata,
-        'title' | 'description' | 'author' | 'twitter' | 'adsense' | 'siteUrl'
+        'title' | 'description' | 'author' | 'adsense' | 'siteUrl'
       >
     | null
     | undefined
@@ -23,11 +23,6 @@ const Meta: React.FC<Props> = ({ site, title }: Props) => {
     <Helmet
       title={pageTitle}
       meta={[
-        { name: 'twitter:card', content: 'summary' },
-        {
-          name: 'twitter:site',
-          content: `@${site?.twitter}`,
-        },
         { property: 'og:title', content: pageTitle },
         { property: 'og:type', content: 'website' },
         {

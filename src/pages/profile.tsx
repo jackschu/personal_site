@@ -24,15 +24,6 @@ const Profile: React.FC<Props> = ({ location, data }: Props) => {
             <Img fixed={profile as FixedObject} className="rounded-circle" />
             <h1>Jack Schumann</h1>
             <p className="lead text-muted">Full-stack engineer at Facebook DC</p>
-            <div>
-              <a
-                href="https://twitter.com/jaxx2104"
-                className="twitter-follow-button"
-                data-show-count="false"
-              >
-                Follow @jaxx2104
-              </a>
-            </div>
           </div>
         </section>
       </div>

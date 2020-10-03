@@ -2265,7 +2265,6 @@ export type SiteFieldsEnum =
   | 'siteMetadata___description'
   | 'siteMetadata___siteUrl'
   | 'siteMetadata___author'
-  | 'siteMetadata___twitter'
   | 'siteMetadata___adsense'
   | 'port'
   | 'host'
@@ -3108,7 +3107,6 @@ export type SiteSiteMetadata = {
   description?: Maybe<Scalars['String']>;
   siteUrl?: Maybe<Scalars['String']>;
   author?: Maybe<Scalars['String']>;
-  twitter?: Maybe<Scalars['String']>;
   adsense?: Maybe<Scalars['String']>;
 };
 
@@ -3117,7 +3115,6 @@ export type SiteSiteMetadataFilterInput = {
   description?: Maybe<StringQueryOperatorInput>;
   siteUrl?: Maybe<StringQueryOperatorInput>;
   author?: Maybe<StringQueryOperatorInput>;
-  twitter?: Maybe<StringQueryOperatorInput>;
   adsense?: Maybe<StringQueryOperatorInput>;
 };
 
@@ -3142,7 +3139,7 @@ export type StringQueryOperatorInput = {
 export type IndexQueryQueryVariables = Exact<{ [key: string]: never; }>;
 
 
-export type IndexQueryQuery = { site?: Maybe<{ meta?: Maybe<Pick<SiteSiteMetadata, 'title' | 'description' | 'siteUrl' | 'author' | 'twitter' | 'adsense'>> }>, remark: { posts: Array<{ post: (
+export type IndexQueryQuery = { site?: Maybe<{ meta?: Maybe<Pick<SiteSiteMetadata, 'title' | 'description' | 'siteUrl' | 'author' | 'adsense'>> }>, remark: { posts: Array<{ post: (
         Pick<MarkdownRemark, 'html'>
         & { frontmatter?: Maybe<(
           Pick<MarkdownRemarkFrontmatter, 'layout' | 'title' | 'path' | 'category' | 'tags' | 'description' | 'date'>
@@ -3160,7 +3157,7 @@ export type PostByPathQueryVariables = Exact<{
 }>;
 
 
-export type PostByPathQuery = { site?: Maybe<{ meta?: Maybe<Pick<SiteSiteMetadata, 'title' | 'description' | 'siteUrl' | 'author' | 'twitter' | 'adsense'>> }>, post?: Maybe<(
+export type PostByPathQuery = { site?: Maybe<{ meta?: Maybe<Pick<SiteSiteMetadata, 'title' | 'description' | 'siteUrl' | 'author' | 'adsense'>> }>, post?: Maybe<(
     Pick<MarkdownRemark, 'id' | 'html'>
     & { frontmatter?: Maybe<(
       Pick<MarkdownRemarkFrontmatter, 'layout' | 'title' | 'path' | 'category' | 'tags' | 'description' | 'date'>

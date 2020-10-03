@@ -41,7 +41,6 @@ export const pageQuery = graphql`
         description
         siteUrl
         author
-        twitter
         adsense
       }
     }
