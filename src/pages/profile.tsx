@@ -22,8 +22,8 @@ const Profile: React.FC<Props> = ({ location, data }: Props) => {
         <section className="text-center">
           <div className="container">
             <Img fixed={profile as FixedObject} className="rounded-circle" />
-            <h1>jaxx2104</h1>
-            <p className="lead text-muted">Front-end engineer.</p>
+            <h1>Jack Schumann</h1>
+            <p className="lead text-muted">Full-stack engineer at Facebook DC</p>
             <div>
               <a
                 href="https://twitter.com/jaxx2104"
