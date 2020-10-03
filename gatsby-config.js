@@ -102,5 +102,6 @@ module.exports = {
     'gatsby-plugin-typescript',
     'gatsby-transformer-sharp',
     'gatsby-plugin-netlify',
+    `gatsby-plugin-client-side-redirect`,
   ],
 }
