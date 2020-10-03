@@ -34,6 +34,15 @@ const Navibar: React.FC<Props> = ({ location, title }: Props) => {
                 Profile
               </Link>
             </li>
+			<li
+              className={
+                location.pathname === '/blog/' ? 'nav-item active' : 'nav-item'
+              }
+            >
+              <Link to="/blog/" className="nav-link">
+                  Blog?
+              </Link>
+            </li>
           </ul>
         </div>
         <div className="navbar-nav flex-row ml-md-auto d-none d-md-flex" />

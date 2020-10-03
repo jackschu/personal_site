@@ -1,74 +1,23 @@
 import { graphql } from 'gatsby'
 import React from 'react'
 
-import { IndexQueryQuery, PostByPathQuery } from '../../types/graphql-types'
-import Post from '../templates/post/post'
+import { ProfilePageQuery } from '../../types/graphql-types'
+import { siteMetadata } from '../../gatsby-config'
 import Meta from '../components/meta/meta'
 import Layout from '../components/layout/layout'
 
 interface Props {
-  data: IndexQueryQuery
-  location: Location
+	data: ProfilePageQuery
+    location: Location	
 }
 
-const BlogIndex: React.FC<Props> = ({ data, location }: Props) => {
-  const posts = data.remark.posts
-  const meta = data.site?.meta
-
+const Index: React.FC<Props> = ({data, location }: Props) => {
   return (
     <Layout location={location}>
-      <Meta site={meta} />
-      {posts.map((post, i) => (
-        <Post
-          data={post as PostByPathQuery}
-          options={{
-            isIndex: true,
-          }}
-          key={i}
-        />
-      ))}
-    </Layout>
+		<Meta site={siteMetadata} title="Home" />
+	  </Layout>
   )
 }
 
-export default BlogIndex
+export default Index
 
-export const pageQuery = graphql`
-  query IndexQuery {
-    site {
-      meta: siteMetadata {
-        title
-        description
-        siteUrl
-        author
-        adsense
-      }
-    }
-    remark: allMarkdownRemark(
-      sort: { fields: [frontmatter___date], order: DESC }
-    ) {
-      posts: edges {
-        post: node {
-          html
-          frontmatter {
-		  hidden	  
-            layout
-            title
-            path
-            category
-            tags
-            description
-            date(formatString: "YYYY/MM/DD")
-            image {
-              childImageSharp {
-                fluid(maxWidth: 500) {
-                  ...GatsbyImageSharpFluid
-                }
-              }
-            }
-          }
-        }
-      }
-    }
-  }
-`
