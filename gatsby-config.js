@@ -3,7 +3,7 @@ module.exports = {
   siteMetadata: {
     title: 'My Corner of the Internet',
     description: 'A personal site for me',
-    siteUrl: 'localhost:8000',
+    siteUrl: 'https://main.d15n9319c53x20.amplifyapp.com/',
     author: 'Jack Schumann',
     adsense: '',
   },
