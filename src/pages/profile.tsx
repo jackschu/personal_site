@@ -37,7 +37,7 @@ export const query = graphql`
   query ProfilePageQuery {
     profile: file(name: { eq: "jackpride" }) {
       childImageSharp {
-        fixed(width: 120, height: 120) {
+          fixed(width: 120, height: 120, quality: 100) {
           ...GatsbyImageSharpFixed_withWebp
         }
       }
