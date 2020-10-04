@@ -22,7 +22,7 @@ const Index: React.FC<Props> = ({ data, location }: Props) => {
             <div className="jumbotron mt-3 pt-0 pb-4">
               <h1 className="display-4">My Corner of the Internet</h1>
               <p className="lead">
-                  This is a simple static site built by me, Jack Schumann. <br/>
+                  This is a simple static site built by me, Jack Schumann. <br/><br/>
 				  I'm not sure what it's for yet but I'm sure its mine.
               </p>
               <hr className="my-4" />
