@@ -1,6 +1,6 @@
 # My personal site
 
-Work in progress: https://deploy.d1t68u91eiv0ta.amplifyapp.com/
+Work in progress: http://jackschumann.com/
 
 Feel free to report issues :)
 
