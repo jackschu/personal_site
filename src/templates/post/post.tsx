@@ -30,7 +30,6 @@ interface Props {
 }
 
 const Post: React.FC<Props> = ({ data, options }: Props) => {
-  console.log(data.post.frontmatter.hidden)
   if (data.post.frontmatter.hidden === true) {
     return null
   }
