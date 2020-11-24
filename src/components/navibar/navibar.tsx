@@ -41,6 +41,15 @@ const Navibar: React.FC<Props> = ({ location, title }: Props) => {
               Blog?
             </Link>
           </li>
+		           <li
+            className={
+              location.pathname === '/connectfour/' ? 'nav-item active' : 'nav-item'
+            }
+          >
+            <Link to="/connectfour/" className="nav-link">
+				C4
+            </Link>
+          </li>
         </ul>
       </div>
       <div className="navbar-nav flex-row ml-md-auto d-none d-md-flex" />
