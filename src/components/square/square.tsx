@@ -11,7 +11,6 @@ interface Props {
 
 const Square: React.FC<Props> = ({ color, onClick, disabled }: Props) => {
   var bootstrapColor
-  console.log(disabled)
   switch (color) {
     case 'empty':
       bootstrapColor = 'btn-outline-secondary'
