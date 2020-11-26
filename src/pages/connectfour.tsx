@@ -89,7 +89,6 @@ const Blog: React.FC<Props> = ({ data, location }: Props) => {
       gg = moduleInstance.getWinner(afterBotMove)
     }
     setGameStatus(getGameOverString(gg))
-    console.log('game end', gg)
   }
 
   return (
