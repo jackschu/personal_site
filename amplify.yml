@@ -7,7 +7,7 @@ frontend:
     build:
       commands:
         - yarn install
-        - gatsby build
+        - yarn build
   artifacts:
     baseDirectory: public
     files:
