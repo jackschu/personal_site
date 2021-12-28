@@ -33,33 +33,28 @@ const Blog: React.FC<Props> = ({ data, location }: Props) => {
 
 export default Blog
 
-export const query = graphql`
-  query BlogPageQuery {
-    remark: allMarkdownRemark(
-      sort: { fields: [frontmatter___date], order: DESC }
-    ) {
-      posts: edges {
-        post: node {
-          html
-          frontmatter {
-            hidden
-            layout
-            title
-            path
-            category
-            tags
-            description
-            date(formatString: "YYYY/MM/DD")
-            image {
-              childImageSharp {
-                fluid(maxWidth: 500) {
-                  ...GatsbyImageSharpFluid
-                }
-              }
+export const query = graphql`query BlogPageQuery {
+  remark: allMarkdownRemark(sort: {fields: [frontmatter___date], order: DESC}) {
+    posts: edges {
+      post: node {
+        html
+        frontmatter {
+          hidden
+          layout
+          title
+          path
+          category
+          tags
+          description
+          date(formatString: "YYYY/MM/DD")
+          image {
+            childImageSharp {
+              gatsbyImageData(width: 500, layout: CONSTRAINED)
             }
           }
         }
       }
     }
   }
+}
 `
