@@ -1,9 +1,11 @@
 version: 1
 frontend:
   phases:
-    build:
+    preBuild:
       commands:
         - nvm use $VERSION_NODE_16
+    build:
+      commands:
         - yarn install
         - yarn run build
   artifacts:
