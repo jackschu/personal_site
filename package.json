@@ -95,13 +95,5 @@
     "hooks": {
       "pre-commit": "lint-staged"
     }
-  },
-  "workspaces": {
-    "packages": [
-      "packages/*"
-    ],
-    "nohoist": [
-      "**/gatsby-transformer-sharp"
-    ]
   }
 }
