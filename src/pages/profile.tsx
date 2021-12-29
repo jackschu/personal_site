@@ -17,7 +17,7 @@ const Profile: React.FC<Props> = ({ location, data }: Props) => {
 
   return (
     <Layout location={location}>
-      <Meta site={siteMetadata} title="Profile" />
+      <Meta site={siteMetadata} title="Blog" />
       <div>
         <section className="text-center">
           <div className="container">
