@@ -15,6 +15,7 @@ frontend:
   cache:
     paths:
       - node_modules/**/*
+      - .cache/**/*
   customHeaders:
     - pattern: '/component---cache-caches-gatsby-plugin-offline-app-shell-js-241020a1cf7d0f317bbe.js'
       headers:
