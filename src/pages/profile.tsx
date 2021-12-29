@@ -21,7 +21,9 @@ const Profile: React.FC<Props> = ({ location, data }: Props) => {
       <div>
         <section className="text-center">
           <div className="container">
-            <GatsbyImage image={profile as FixedObject} className="rounded-circle" />
+			  <div className="d-flex justify-content-center mb-2">
+				  <GatsbyImage image={profile as FixedObject} className="rounded-circle" alt="Jack Schumann"/>
+				  </div>
             <h1>Jack Schumann</h1>
             <p className="lead text-muted">
               Full-stack engineer at MetaDC
@@ -38,7 +40,7 @@ export default Profile
 export const query = graphql`query ProfilePageQuery {
   profile: file(name: {eq: "jackpride"}) {
     childImageSharp {
-      gatsbyImageData(width: 120, height: 120, quality: 100, layout: FIXED)
+      gatsbyImageData(width: 120, height: 120, quality: 100, layout: FIXED, placeholder: BLURRED)
     }
   }
 }
