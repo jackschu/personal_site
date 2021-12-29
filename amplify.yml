@@ -16,6 +16,7 @@ frontend:
     paths:
       - node_modules/**/*
       - .cache/**/*
+      - public/**/*
   customHeaders:
     # JS caching https://www.gatsbyjs.com/docs/caching/
     - pattern: '**/**/!(sw).js'
