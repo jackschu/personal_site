@@ -1,10 +1,13 @@
 version: 1
 frontend:
   phases:
+    preBuild:
+      commands:
+        - nvm install 16
     build:
       commands:
         - yarn install
-        - gatsby build
+        - yarn run build
   artifacts:
     baseDirectory: public
     files:
@@ -12,59 +15,30 @@ frontend:
   cache:
     paths:
       - node_modules/**/*
+      - .cache/**/*
+      - public/**/*
   customHeaders:
-    - pattern: '/component---cache-caches-gatsby-plugin-offline-app-shell-js-241020a1cf7d0f317bbe.js'
+    # JS caching https://www.gatsbyjs.com/docs/caching/
+    - pattern: '**/**/!(sw).js'
       headers:
         - key: 'Cache-Control'
           value: 'public, max-age=31536000, immutable'
-    - pattern: '/styles.8a404840dd09b20a99b9.css'
+    # CSS caching
+    - pattern: '**/*.css'
       headers:
         - key: 'Cache-Control'
           value: 'public, max-age=31536000, immutable'
-    - pattern: '/styles-e9d24b1846c7d6eb9685.js'
+    # html
+    - pattern: '**/*.html'
       headers:
         - key: 'Cache-Control'
-          value: 'public, max-age=31536000, immutable'
-    - pattern: '/650771dbcf3dbb1320e5907c4a8864a3e36763dc-bd1ee624a6286b1ec9e7.js'
+          value: 'public, max-age=0, must-revalidate'
+    # page data (and app data)
+    - pattern: '/page-data/*'
       headers:
         - key: 'Cache-Control'
-          value: 'public, max-age=31536000, immutable'
-    - pattern: '/42c99759b1334450ba706235739165cb7ee07427-2350ed2d501501cbf7b8.js'
-      headers:
-        - key: 'Cache-Control'
-          value: 'public, max-age=31536000, immutable'
-    - pattern: '/component---src-templates-template-tsx-237276fea2423b3a3142.js'
-      headers:
-        - key: 'Cache-Control'
-          value: 'public, max-age=31536000, immutable'
-    - pattern: '/component---src-pages-blog-tsx-2d087067c4f22ec5b7c1.js'
-      headers:
-        - key: 'Cache-Control'
-          value: 'public, max-age=31536000, immutable'
-    - pattern: '/component---src-pages-index-tsx-8edcb86e00894a04ad5b.js'
-      headers:
-        - key: 'Cache-Control'
-          value: 'public, max-age=31536000, immutable'
-    - pattern: '/component---src-pages-profile-tsx-df5fa29e6fc851904cbd.js'
-      headers:
-        - key: 'Cache-Control'
-          value: 'public, max-age=31536000, immutable'
-    - pattern: '/webpack-runtime-e493e5f92dac44de1ac3.js'
-      headers:
-        - key: 'Cache-Control'
-          value: 'public, max-age=31536000, immutable'
-    - pattern: '/framework-58f863d6aa18c11a521f.js'
-      headers:
-        - key: 'Cache-Control'
-          value: 'public, max-age=31536000, immutable'
-    - pattern: '/b637e9a5-99d61ae4d270b0f96e54.js'
-      headers:
-        - key: 'Cache-Control'
-          value: 'public, max-age=31536000, immutable'
-    - pattern: '/app-7b8e8175bc1ac23c6b4f.js'
-      headers:
-        - key: 'Cache-Control'
-          value: 'public, max-age=31536000, immutable'
+          value: 'public, max-age=0, must-revalidate'
+    # static
     - pattern: '/static/*'
       headers:
         - key: 'Cache-Control'
@@ -72,4 +46,4 @@ frontend:
     - pattern: '/sw.js'
       headers:
         - key: 'Cache-Control'
-          value: 'no-cache'
+          value: 'public, max-age=0, must-revalidate'

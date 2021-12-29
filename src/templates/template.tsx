@@ -39,36 +39,33 @@ const Template: React.FC<Props> = ({ data, location }: Props) => {
 
 export default Template
 
-export const pageQuery = graphql`
-  query PostByPath($path: String!) {
-    site {
-      meta: siteMetadata {
-        title
-        description
-        siteUrl
-        author
-        adsense
-      }
+export const pageQuery = graphql`query PostByPath($path: String!) {
+  site {
+    meta: siteMetadata {
+      title
+      description
+      siteUrl
+      author
+      adsense
     }
-    post: markdownRemark(frontmatter: { path: { eq: $path } }) {
-      id
-      html
-      frontmatter {
-        layout
-        title
-        path
-        category
-        tags
-        description
-        date(formatString: "YYYY/MM/DD")
-        image {
-          childImageSharp {
-            fluid(maxWidth: 500) {
-              ...GatsbyImageSharpFluid
-            }
-          }
+  }
+  post: markdownRemark(frontmatter: {path: {eq: $path}}) {
+    id
+    html
+    frontmatter {
+      layout
+      title
+      path
+      category
+      tags
+      description
+      date(formatString: "YYYY/MM/DD")
+      image {
+        childImageSharp {
+          gatsbyImageData(width: 500, layout: CONSTRAINED)
         }
       }
     }
   }
+}
 `

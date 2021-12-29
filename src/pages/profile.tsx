@@ -1,5 +1,5 @@
 import { graphql } from 'gatsby'
-import Img, { FixedObject } from 'gatsby-image'
+import { GatsbyImage } from 'gatsby-plugin-image'
 import React from 'react'
 
 import { ProfilePageQueryQuery } from '../../types/graphql-types'
@@ -13,19 +13,23 @@ interface Props {
 }
 
 const Profile: React.FC<Props> = ({ location, data }: Props) => {
-  const profile = data.profile?.childImageSharp?.fixed
+  const profile = data.profile?.childImageSharp?.gatsbyImageData
 
   return (
     <Layout location={location}>
-      <Meta site={siteMetadata} title="Profile" />
+      <Meta site={siteMetadata} title="Blog" />
       <div>
         <section className="text-center">
           <div className="container">
-            <Img fixed={profile as FixedObject} className="rounded-circle" />
+            <div className="d-flex justify-content-center mb-2">
+              <GatsbyImage
+                image={profile as FixedObject}
+                className="rounded-circle"
+                alt="Jack Schumann"
+              />
+            </div>
             <h1>Jack Schumann</h1>
-            <p className="lead text-muted">
-              Full-stack engineer at MetaDC
-            </p>
+            <p className="lead text-muted">Full-stack engineer at MetaDC</p>
           </div>
         </section>
       </div>
@@ -39,9 +43,13 @@ export const query = graphql`
   query ProfilePageQuery {
     profile: file(name: { eq: "jackpride" }) {
       childImageSharp {
-        fixed(width: 120, height: 120, quality: 100) {
-          ...GatsbyImageSharpFixed
-        }
+        gatsbyImageData(
+          width: 120
+          height: 120
+          quality: 100
+          layout: FIXED
+          placeholder: BLURRED
+        )
       }
     }
   }

@@ -1,6 +1,6 @@
 import { graphql } from 'gatsby'
 import React from 'react'
-import Img, { FixedObject } from 'gatsby-image'
+import { GatsbyImage } from "gatsby-plugin-image";
 
 import { siteMetadata } from '../../gatsby-config'
 import Meta from '../components/meta/meta'
@@ -42,14 +42,11 @@ const Index: React.FC<Props> = ({ data, location }: Props) => {
 
 export default Index
 
-export const query = graphql`
-  query LandingPageQuery {
-    profile: file(name: { eq: "jackpride" }) {
-      childImageSharp {
-        fixed(width: 120, height: 120, quality: 100) {
-          ...GatsbyImageSharpFixed
-        }
-      }
+export const query = graphql`query LandingPageQuery {
+  profile: file(name: {eq: "jackpride"}) {
+    childImageSharp {
+      gatsbyImageData(width: 120, height: 120, quality: 100, layout: FIXED)
     }
   }
+}
 `
