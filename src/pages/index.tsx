@@ -4,6 +4,7 @@ import React from 'react'
 import { siteMetadata } from '../../gatsby-config'
 import Meta from '../components/meta/meta'
 import Layout from '../components/layout/layout'
+import './home_style.scss'
 
 interface Props {
   data: ProfilePageQuery
