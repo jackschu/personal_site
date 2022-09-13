@@ -1,5 +1,5 @@
 import { Link } from 'gatsby'
-import { GatsbyImage } from "gatsby-plugin-image";
+import { GatsbyImage } from 'gatsby-plugin-image'
 import React from 'react'
 
 import Adsense from '../../components/adsense/adsense'
@@ -58,7 +58,8 @@ const Post: React.FC<Props> = ({ data, options }: Props) => {
           {image?.childImageSharp?.gatsbyImageData && (
             <GatsbyImage
               image={image.childImageSharp.gatsbyImageData as FluidObject}
-              style={{ display: 'block', margin: '0 auto' }} />
+              style={{ display: 'block', margin: '0 auto' }}
+            />
           )}
         </div>
         <div
@@ -71,7 +72,7 @@ const Post: React.FC<Props> = ({ data, options }: Props) => {
         {!isIndex && <Adsense clientId={adsense} slotId="" format="auto" />}
       </div>
     </div>
-  );
+  )
 }
 
 export default Post

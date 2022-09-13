@@ -82,7 +82,6 @@ module.exports = {
       resolve: 'gatsby-plugin-netlify',
       options: {
         mergeSecurityHeaders: true,
-        mergeLinkHeaders: true,
         mergeCachingHeaders: true,
       },
     },
@@ -99,10 +98,9 @@ module.exports = {
     'gatsby-plugin-sitemap',
     'gatsby-plugin-twitter',
     'gatsby-plugin-typescript',
+    `gatsby-plugin-client-side-redirect`,
     `gatsby-plugin-image`,
     `gatsby-plugin-sharp`,
     `gatsby-transformer-sharp`,
-    'gatsby-plugin-netlify',
-    `gatsby-plugin-client-side-redirect`,
   ],
 }
