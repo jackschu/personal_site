@@ -29,7 +29,15 @@ const Profile: React.FC<Props> = ({ location, data }: Props) => {
               />
             </div>
             <h1>Jack Schumann</h1>
-            <p className="lead text-muted">Full-stack engineer at MetaDC</p>
+            <p className="lead text-muted mb-0">
+              Senior software engineer at{' '}
+              <a target="_blank" href="https://www.antithesis.com">
+                Antithesis
+              </a>
+            </p>
+            <p className="text-muted">
+              Previously: Full-stack engineer at Meta DC
+            </p>
           </div>
         </section>
       </div>
