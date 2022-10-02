@@ -4,6 +4,7 @@
   "version": "4.0.0",
   "author": "Jack Schumann",
   "dependencies": {
+    "@popperjs/core": "^2.11.6",
     "gatsby": "^4.23.0",
     "gatsby-link": "2.4.15",
     "gatsby-plugin-catch-links": "^4.23.0",
