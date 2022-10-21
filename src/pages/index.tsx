@@ -44,18 +44,27 @@ const Index: React.FC<Props> = ({ location }: Props) => {
       <div className="container-fluid">
         <div className="row justify-content-center">
           <div className="col-sm-8">
-            <div className="jumbotron mt-3 pt-0 pb-4">
-              <div className="d-flex flex-row justify-content-center">
-                <h1 className="display-4">Hi I'm</h1>
+            <div className="jumbotron mt-3 pt-2 pb-4">
+              <div className="d-flex flex-column d-md-flex flex-md-row justify-content-center">
+                <h1 className="display-4 text-md-end ms-md-auto">Hi I'm</h1>
                 <motion.div
                   variants={container}
                   initial="hidden"
                   animate="show"
-                  className="letter-container"
+                  className="letter-container ms-md-2 ms-auto me-auto mt-md-2 mb-1"
                 >
-                  <motion.div variants={letter_variant} className="letter-j" />
-                  <motion.div variants={letter_variant} className="letter-a" />
-                  <motion.div variants={letter_variant} className="letter-c" />
+                  <motion.div
+                    variants={letter_variant}
+                    className="letter-j me-2"
+                  />
+                  <motion.div
+                    variants={letter_variant}
+                    className="letter-a me-2"
+                  />
+                  <motion.div
+                    variants={letter_variant}
+                    className="letter-c me-2"
+                  />
                   <motion.div variants={letter_variant} className="letter-k" />
                 </motion.div>
               </div>
