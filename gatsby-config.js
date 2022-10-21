@@ -53,7 +53,6 @@ module.exports = {
         name: "Jack Schumann's Portfolio",
         short_name: 'Jack Schumann',
         description: "Jack Schumann's personal website.",
-        homepage_url: 'https://jackschumann.com',
         start_url: '/',
         background_color: '#fff',
         theme_color: '#673ab7',
@@ -75,7 +74,7 @@ module.exports = {
     {
       resolve: 'gatsby-plugin-google-analytics',
       options: {
-        trackingId: '',
+        trackingId: '338528462',
       },
     },
     {
