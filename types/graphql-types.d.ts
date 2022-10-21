@@ -252,10 +252,6 @@ export type Site = Node & {
   port?: Maybe<Scalars['Int']>;
   host?: Maybe<Scalars['String']>;
   pathPrefix?: Maybe<Scalars['String']>;
-  polyfill?: Maybe<Scalars['Boolean']>;
-  jsxRuntime?: Maybe<Scalars['String']>;
-  trailingSlash?: Maybe<Scalars['String']>;
-  graphqlTypegen?: Maybe<Scalars['Boolean']>;
   id: Scalars['ID'];
   parent?: Maybe<Node>;
   children: Array<Node>;
@@ -824,10 +820,6 @@ export type QuerySiteArgs = {
   port?: InputMaybe<IntQueryOperatorInput>;
   host?: InputMaybe<StringQueryOperatorInput>;
   pathPrefix?: InputMaybe<StringQueryOperatorInput>;
-  polyfill?: InputMaybe<BooleanQueryOperatorInput>;
-  jsxRuntime?: InputMaybe<StringQueryOperatorInput>;
-  trailingSlash?: InputMaybe<StringQueryOperatorInput>;
-  graphqlTypegen?: InputMaybe<BooleanQueryOperatorInput>;
   id?: InputMaybe<StringQueryOperatorInput>;
   parent?: InputMaybe<NodeFilterInput>;
   children?: InputMaybe<NodeFilterListInput>;
@@ -2124,10 +2116,6 @@ export type SiteFieldsEnum =
   | 'port'
   | 'host'
   | 'pathPrefix'
-  | 'polyfill'
-  | 'jsxRuntime'
-  | 'trailingSlash'
-  | 'graphqlTypegen'
   | 'id'
   | 'parent___id'
   | 'parent___parent___id'
@@ -2269,10 +2257,6 @@ export type SiteFilterInput = {
   port?: InputMaybe<IntQueryOperatorInput>;
   host?: InputMaybe<StringQueryOperatorInput>;
   pathPrefix?: InputMaybe<StringQueryOperatorInput>;
-  polyfill?: InputMaybe<BooleanQueryOperatorInput>;
-  jsxRuntime?: InputMaybe<StringQueryOperatorInput>;
-  trailingSlash?: InputMaybe<StringQueryOperatorInput>;
-  graphqlTypegen?: InputMaybe<BooleanQueryOperatorInput>;
   id?: InputMaybe<StringQueryOperatorInput>;
   parent?: InputMaybe<NodeFilterInput>;
   children?: InputMaybe<NodeFilterListInput>;
