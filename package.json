@@ -5,6 +5,7 @@
   "author": "Jack Schumann",
   "dependencies": {
     "@popperjs/core": "^2.11.6",
+    "framer-motion": "^7.6.1",
     "gatsby": "^4.24.3",
     "gatsby-link": "^4.24.1",
     "gatsby-plugin-catch-links": "^4.23.0",
