@@ -1,6 +1,99 @@
+@import '../scss/colors.scss';
+
 .jumbotron {
   padding: 4rem 2rem;
   margin-bottom: 2rem;
   background-color: #e9ecef;
-  border-radius: .3rem;
+  border-radius: 0.3rem;
+}
+
+.letter-container > div {
+  margin-left: 10px;
+  margin-top: 15px;
+  float: left;
+}
+
+// modified from https://codepen.io/rhgksrua/pen/GgbLKM
+
+.letter-c {
+  position: relative;
+  width: 40px;
+  height: 30px;
+  border-width: 10px 0 10px 10px;
+  border-style: solid;
+  border-color: $purple transparent $purple $purple;
+  background-color: transparent;
+  border-radius: 10px;
+}
+
+.letter-k {
+  position: relative;
+  width: 40px;
+  height: 50px;
+  border-style: solid;
+  border-color: $purple;
+  border-width: 0 0 0 10px;
+  overflow: hidden;
+}
+
+.letter-k::before {
+  content: '';
+  position: absolute;
+  top: -19px;
+  left: 9px;
+  width: 10px;
+  height: 70px;
+  left: 10px;
+  background: $purple;
+  transform: rotate(50deg);
+}
+
+.letter-k::after {
+  content: '';
+  position: absolute;
+  top: 15px;
+  right: 14px;
+  width: 10px;
+  height: 43px;
+  background: $purple;
+  transform: rotate(-40deg);
+}
+
+.letter-a {
+  position: relative;
+  width: 30px;
+  height: 40px;
+  border-radius: 10px 10px 0 0;
+  border-style: solid;
+  border-color: $purple $purple transparent $purple;
+  border-width: 10px 10px 0 10px;
+}
+
+.letter-a::before {
+  content: '';
+  position: absolute;
+  top: 10px;
+  height: 10px;
+  width: 30px;
+  background: $purple;
+}
+
+.letter-j {
+  position: relative;
+  width: 40px;
+  height: 40px;
+  border-style: solid;
+  border-color: $purple;
+  border-width: 0 10px 10px 0;
+  border-radius: 0 0 10px 10px;
+}
+
+.letter-j::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  right: left;
+  width: 10px;
+  height: 10px;
+  background: $purple;
 }

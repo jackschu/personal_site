@@ -1,4 +1,3 @@
-/* eslint-disable @typescript-eslint/camelcase */
 module.exports = {
   siteMetadata: {
     title: 'My Corner of the Internet',
